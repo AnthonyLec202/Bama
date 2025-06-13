@@ -1,0 +1,27 @@
+<h1 class="title">Bienvenue chez BAMA <br>
+  <img src="assets/images/logo.jpg" alt="Logo BAMA" class="logo">
+</h1>
+
+<nav class="nav-bar">
+  <div class="nav-left">
+    <a routerLink="/">Menu</a>
+  </div>
+
+  <div class="nav-right">
+    <ng-container *ngIf="authService.isLoggedIn()">
+      <a routerLink="/mon-compte">Mon Compte</a>
+      <a routerLink="/" fragment="panier-section">Mon Panier</a>
+      <a routerLink="/mes-commandes">Mes Commandes</a>
+      <a (click)="logout()" class="logout-link">Déconnexion</a>
+    </ng-container>
+
+    <ng-container *ngIf="!authService.isLoggedIn()">
+      <a *ngIf="router.url !== '/login'" routerLink="/login">Connexion</a>
+      <a *ngIf="router.url === '/login'" routerLink="/register">Inscription</a>
+    </ng-container>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

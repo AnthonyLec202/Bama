@@ -1,0 +1,22 @@
+<div class="orders-container">
+  <h2>Mes Commandes</h2>
+  <div *ngIf="isLoading"><p>Chargement...</p></div>
+  <div *ngIf="!isLoading && orders.length === 0"><p>Vous n'avez aucune commande passée.</p></div>
+
+  <div class="order-card" *ngFor="let order of orders">
+    <div class="order-header">
+      <h3>Commande #{{ order.customerOrderId }}</h3>
+      <span class="status" [ngClass]="order.status">{{ order.status }}</span>
+    </div>
+    <div class="order-body">
+      <ul>
+        <li *ngFor="let item of order.orderItems">
+          {{ item.quantity }} x {{ item.burger.name }}
+        </li>
+      </ul>
+    </div>
+    <div class="order-footer">
+      <strong>Total : {{ order.totalPrice | number:'1.2-2' }} €</strong>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  /* Chemin vers ton image dans le dossier assets */
+  background-image: url('assets/images/fond.jpg');
+
+  /* Fait en sorte que l'image couvre tout l'arrière-plan sans se déformer */
+  background-size: cover;
+
+  /* Centre l'image */
+  background-position: center center;
+
+  /* Empêche l'image de se répéter si elle est trop petite */
+  background-repeat: no-repeat;
+
+  /* Fixe l'image pour qu'elle ne défile pas avec le contenu de la page */
+  background-attachment: fixed;
+
+  /* C'est bien d'avoir une couleur de fond au cas où l'image ne chargerait pas */
+  background-color: #f8f9fa;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+p {
+  text-align: center;
+  color: #666;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #007bff;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+h2 {
+  color: #333;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+label {
+  margin-bottom: 5px;
+}
+input {
+  margin-bottom: 15px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #218838;
+}
+/* Add any additional global styles here */

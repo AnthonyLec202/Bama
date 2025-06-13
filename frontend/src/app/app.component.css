@@ -1,0 +1,67 @@
+/* === STYLE DU TITRE PRINCIPAL === */
+.title {
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  font-size: 2.8em; /* Un peu plus grand */
+  font-weight: 700; /* Police plus grasse */
+  color: #ff6f00; /* On garde notre orange */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+  display: block;
+  margin: 15px auto;
+  max-width: 120px;
+  height: auto;
+}
+
+/* === STYLE DE LA BARRE DE NAVIGATION === */
+.nav-bar {
+  display: flex;
+  justify-content: space-between; /* Aligne les groupes à gauche et à droite */
+  align-items: center;
+  background-color: #ff6f00;
+  padding: 10px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500; /* Police un peu moins grasse que le titre */
+  font-size: 1.1em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-bar a:hover {
+  background-color: #e65c00;
+  transform: translateY(-2px);
+}
+
+/* === STYLE DU CONTENEUR PRINCIPAL === */
+/* On utilise la notation :host pour s'assurer que le style ne s'applique qu'à ce composant */
+:host ::ng-deep .container {
+  background-color: rgba(255, 255, 255, 0.92); /* Fond blanc semi-transparent */
+  padding: 25px;
+  margin: 25px auto; /* Centrage et marges */
+  border-radius: 8px;
+  max-width: 1200px; /* On définit une largeur maximale pour les grands écrans */
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Petit espace entre les liens de droite */
+}
+
+/* Style pour le lien de déconnexion pour qu'il ait un curseur "main" */
+.logout-link {
+  cursor: pointer;
+}

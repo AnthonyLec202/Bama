@@ -1,0 +1,143 @@
+.menu-container {
+  padding: 20px;
+}
+
+.menu-container h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.burger-grid {
+  display: grid;
+  /* Crée des colonnes qui s'adaptent à la taille de l'écran */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px; /* Espace entre les cartes */
+}
+
+.burger-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  display: flex;
+  flex-direction: column; /* Organise le contenu en colonne */
+  transition: transform 0.2s;
+}
+
+.burger-card:hover {
+  transform: translateY(-5px); /* Effet de lévitation au survol */
+}
+
+.card-content {
+  padding: 15px;
+  flex-grow: 1; /* Pousse les actions en bas */
+}
+
+.card-content h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center; /* Centre le titre */
+  font-weight: 500;
+  color: #ff6f00; /* Couleur orange pour le titre */
+}
+
+.description {
+  font-size: 0.9em;
+  color: #666;
+  min-height: 40px; /* Assure une hauteur minimale pour l'alignement */
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.card-actions {
+  padding: 0 15px 15px 15px;
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+}
+
+.stock {
+    font-size: 0.8em;
+    color: #28a745;
+}
+
+.stock.no-stock {
+    color: #dc3545;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  background-color: #ff6f00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #e65c00;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+/* ... (le style des cartes burger est déjà là) ... */
+
+/* AJOUTER CE STYLE POUR LE PANIER */
+.cart-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.cart-table th {
+  background-color: #f8f8f8;
+}
+
+.cart-summary {
+  text-align: right;
+}
+
+.cart-summary .cart-actions button {
+  width: auto; /* Pour que les boutons ne prennent pas toute la largeur */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.checkout-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.clear-button {
+  background-color: #dc3545;
+  color: white;
+}
